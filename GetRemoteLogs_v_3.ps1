@@ -1,7 +1,3 @@
-﻿#
-#  This script exports consolidated and filtered event logs to CSV
-#  Author: Michael Karsyan, FSPro Labs, eventlogxp.com (c) 2016
-#  Modified for use by: Bryan Bowie, bryanbowie.info 2016
 #  Version 3.0
 # Added more comments to the sections
 # Added all lognames line 20
@@ -14,10 +10,10 @@
 Set-Variable -Name EventAgeDays -Value 7
 
 # Setting variables to the machine name you are wanting logs from. Repalce SERV(N).
-Set-Variable -Name CompArr -Value @("DESKTOP-A7CLLQH")
+Set-Variable -Name CompArr -Value @("SERV1", "SERV2", "SERV3")
 
 # Setting the variable to check for application and systems logs.
-# Need to run "Get-EventLog -list" on machine and correct below names if needed.
+# Run "Get-EventLog -list" on machine and correct below names if needed.
 Set-Variable -Name LogNames -Value @("Application", "Security", "System", "HardwareEvents", "Internet Explorer", "Key Management Service", "OAlerts", "PreEmptive", "Windows PowerShell")
 
 # Setting the variable to catch all log types.
